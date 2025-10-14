@@ -1,0 +1,152 @@
+Ques 1 : Explain the difference between frontend, backend, and full-stack development with
+suitable real-world examples.
+Ans : Frontend Development:
+        This is what users see and interact with directly — the design, buttons, menus, colors, and animations.
+        It’s built using HTML (structure), CSS (styling), and JavaScript (logic/behavior).
+
+        Example: When you open Netflix, the homepage layout, movie thumbnails, and hover animations — that’s frontend.
+
+      Backend Development:
+        This is what happens behind the scenes — server logic, data handling, and communication with the database.
+        It’s built using languages like Python, Java, Node.js, PHP, and frameworks like Django, Spring Boot, Express.js.
+
+        Example: When you log in to Netflix, the backend checks your credentials, fetches your preferences, 
+        and sends movie data to the frontend.
+
+      Full-Stack Development:
+        A Full-Stack Developer handles both frontend and backend — building complete web applications end to end.
+
+        Example: A developer who creates a food delivery app where users can order (frontend) and the restaurant receives
+        and processes those orders (backend).
+
+
+Ques 2 : Create a simple diagram showing how the client-server model works in web architecture.
+Ans : Client-Server Model
+
+                        +-------------------+
+                        |     CLIENT        |
+                        | (Browser, App)    |
+                        +-------------------+
+                                    |
+                                    | HTTP Request (GET/POST)
+                                    v
+                        +-------------------+
+                        |    WEB SERVER     |
+                        | (Processes, Logic)|
+                        +-------------------+
+                                    |
+                                    | Database Query`
+                                    v
+                        +-------------------+
+                        |    DATABASE       |
+                        | (Stores Data)     |
+                        +-------------------+
+                                    ^
+                                    | Response (HTML/JSON)
+                                    |
+                        <--------- Client Receives Response
+
+
+Ques 3 : Describe how a browser requests and displays a web page from a web server.
+Ans : 
+      1. User enters a URL — e.g., www.amazon.in.
+
+      2. DNS Lookup: The domain name is converted into an IP address (like a phone number for servers).
+
+      3. HTTP Request: The browser sends a request to that server asking for the webpage.
+
+      4. Server Processing: The server fetches the required HTML, CSS, JS, or data from the database.
+
+      5. Response Sent: The server sends back the files to the browser.
+
+      6. Rendering:
+         -Browser parses HTML → builds the structure (DOM).
+         -Loads CSS → applies styling.
+         -Runs JavaScript → adds interactivity.
+      
+      The final result is displayed visually on your screen.
+
+
+Ques 4 : Identify and list the tools required to set up a web development environment. Explain the
+         purpose of each.
+Ans : 
+          +-----------------------------------------+----------------------------------------------------------------------+
+          |                  Tool                   |                             Purpose                                  |
+          |-----------------------------------------|----------------------------------------------------------------------|
+          |     VS Code                             | Code editor with syntax highlighting, debugging, and extensions.     |
+          |     Web Browser (Chrome, Edge, Firefox) | To run and test your web pages.                                      |
+          |     Node.js + npm                       | To run JavaScript outside the browser and manage packages/libraries. |
+          |     Git & GitHub                        | Version control and collaborative coding.                            |
+          |     Live Server Extension (VS Code)     | Auto-refresh browser when you save code.                             |
+          +-----------------------------------------+----------------------------------------------------------------------+
+
+
+Ques 5 : Explain what a web server is and give examples of commonly used servers.
+Ans : A web server is software that delivers web pages to clients (browsers) via HTTP/HTTPS requests.
+      When a user requests a page, the server finds the file, processes it (if needed), and sends it back.
+
+      Common Web Servers:
+        -Apache HTTP Server – Most popular open-source server.
+        -Nginx – Known for speed and scalability.
+        -Microsoft IIS – Windows-based web server.
+        -LiteSpeed – Lightweight and efficient.
+        -Node.js (Express.js) – Used for dynamic applications in JavaScript.
+
+
+Ques 6 : Define the roles of a frontend developer, backend developer, and database administrator in a project.
+Ans : Frontend Developer: Builds the user interface and ensures responsiveness, accessibility, and design accuracy.
+      Backend Developer: Manages server logic, authentication, APIs, and database connections.
+      Database Administrator (DBA): Designs, secures, and maintains databases; ensures data integrity and performance.
+
+
+Ques 8 : Explain the difference between static and dynamic websites. Provide an example of each.
+Ans : Static Website:
+        Fixed content — same for every user.
+        Example: A personal portfolio or resume website.
+        Built using only HTML, CSS, and JS.
+
+      Dynamic Website:
+        Content changes based on user input or database data.
+        Example: Facebook, YouTube, or any e-commerce site where content updates automatically.
+
+  
+Ques 9 : Research and list five web browsers. Explain how rendering engines differ between them.
+Ans :  
+        +---------------------+------------------------+-------------------------------------------------+
+        | Browser             | Rendering Engine       | Description                                     |
+        | ------------------- | ---------------------- | ----------------------------------------------- |
+        | **Google Chrome**   | Blink                  | Fast and modern; supports latest web standards. |
+        | **Mozilla Firefox** | Gecko                  | Open-source and privacy-focused.                |
+        | **Safari**          | WebKit                 | Optimized for Apple devices.                    |
+        | **Microsoft Edge**  | Blink (Chromium-based) | Efficient and integrated with Windows.          |
+        | **Opera**           | Blink                  | Lightweight, with built-in VPN and ad-blocker.  |
+        +---------------------+------------------------+-------------------------------------------------+
+
+
+Ques 10 : Draw a labeled diagram showing the basic web architecture flow — client, server, database, and APIs.
+Ans :      
+                  +-----------------+
+                  |     CLIENT      |
+                  | (Browser/App)   |
+                  +--------+--------+
+                          |
+                          | HTTP Request (GET/POST)
+                          v
+                  +-----------------+
+                  |     SERVER      |
+                  | (Node.js, Java) |
+                  +--------+--------+
+                          |
+                          | SQL/NoSQL Query
+                          v
+                  +-----------------+
+                  |   DATABASE      |
+                  | (MySQL, MongoDB)|
+                  +--------+--------+
+                          ^
+                          | JSON / HTML Response
+                          |
+                  +-----------------+
+                  |   API Layer     |
+                  | (REST, GraphQL) |
+                  +-----------------+
