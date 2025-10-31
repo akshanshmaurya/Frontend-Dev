@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Course Registration</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="course">Select a Course:</label>
+            <select id="course" name="course">
+                <option value="html">HTML Basics</option>
+                <option value="css">CSS Fundamentals</option>
+                <option value="js">JavaScript for Beginners</option>
+            </select>
+        </fieldset>
+    </form>
+    <br>
+    <h2>Available Course Schedules</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Instructor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monday</td>
+                <td>10:00 AM - 12:00 PM</td>
+                <td>Mr. Smith</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>2:00 PM - 4:00 PM</td>
+                <td>Ms. Jones</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
