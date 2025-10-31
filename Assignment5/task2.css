@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+nav {
+    text-align: center;
+    padding: 15px;
+    background-color: #444;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main section {
+    padding: 50px 20px;
+    margin: 20px 0;
+    border-top: 5px solid #ddd;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Section-specific styles */
+#history {
+    background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url('https://via.placeholder.com/1200x400.png/FF5733/FFFFFF?text=History');
+    color: white;
+    background-attachment: fixed; /* Parallax-like effect */
+}
+
+#attractions {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2)), url('https://via.placeholder.com/1200x400.png/33FF57/FFFFFF?text=Attractions');
+    background-color: #e2e2e2;
+}
+
+#culture {
+    background-image: url('https://via.placeholder.com/1200x400.png/3357FF/FFFFFF?text=Culture');
+    color: white;
+    background-attachment: fixed; /* Parallax-like effect */
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    border-bottom: 2px solid;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}

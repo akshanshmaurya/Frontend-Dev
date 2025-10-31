@@ -1,0 +1,58 @@
+/* General Body Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Custom background color */
+    color: #333; /* Custom text color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* rem unit */
+    margin: 0;
+}
+
+header nav a {
+    color: white;
+    margin: 0 15px; /* px unit */
+    text-decoration: none;
+    font-size: 1.2em; /* em unit */
+}
+
+/* Main Content Styles */
+main {
+    flex: 1;
+    padding: 8rem 2rem 2rem; /* Adjust padding to account for fixed header */
+    width: 80%; /* % unit */
+    margin: 0 auto;
+}
+
+main section img {
+    width: 150px; /* px unit */
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+}

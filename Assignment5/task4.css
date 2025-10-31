@@ -1,0 +1,55 @@
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #fdfdfd;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.subheading {
+    font-style: italic;
+    color: #555;
+}
+
+article p {
+    margin-bottom: 20px; /* Consistent spacing between paragraphs */
+}
+
+/* Style the first letter of each paragraph */
+article p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+    color: #d9534f;
+    float: left;
+    margin-right: 5px;
+}
+
+/* Make the first line of each paragraph bold */
+article p::first-line {
+    font-weight: bold;
+}
+
+/* Custom style for highlighted text */
+mark {
+    background-color: #fcf8e3;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+/* Style for blockquote */
+blockquote {
+    border-left: 5px solid #d9534f;
+    background-color: #f9f9f9;
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-style: italic;
+}

@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.pricing-container {
+    display: flex;
+    gap: 20px;
+}
+
+.pricing-plan {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-plan:hover {
+    transform: scale(1.05);
+    background-color: #f9f9f9;
+}
+
+.pricing-plan.popular {
+    border-color: #007BFF;
+    border-width: 2px;
+}
+
+.pricing-plan h2 {
+    margin-top: 0;
+}
+
+.price {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+}
