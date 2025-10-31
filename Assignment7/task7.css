@@ -1,0 +1,19 @@
+article {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+
+p::first-letter {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+p::first-line {
+    font-weight: bold;
+}
+
+mark { background-color: yellow; }
+strong { color: darkred; }
+em { font-style: italic; }

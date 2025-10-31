@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    padding: 20px;
+    border-width: 5px;
+    transition: border-color 0.3s;
+}
+
+.solid { border-style: solid; }
+.dashed { border-style: dashed; }
+.double { border-style: double; }
+.groove { border-style: groove; }
+.rounded { border-style: solid; border-radius: 15px; }
+
+.box:hover {
+    border-color: #ff6347; /* Tomato */
+}

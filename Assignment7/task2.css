@@ -1,0 +1,35 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 20px;
+}
+
+.box {
+    overflow: auto;
+}
+
+.box1 {
+    width: 150px;
+    height: 100px;
+    background-color: lightblue;
+}
+
+.box2 {
+    width: 20%;
+    min-height: 100px;
+    max-width: 300px;
+    background-color: lightgreen;
+}
+
+.box3 {
+    width: 15em;
+    height: 20vh;
+    background-color: lightcoral;
+}

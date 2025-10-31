@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+}
+
+.rotate:hover { transform: rotate(45deg); }
+.scale:hover { transform: scale(1.5); }
+.translate:hover { transform: translate(20px, 20px); }
+.skew:hover { transform: skew(20deg, 20deg); }

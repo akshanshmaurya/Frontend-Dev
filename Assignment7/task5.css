@@ -1,0 +1,28 @@
+/* Attribute Selector */
+[type="text"] {
+    border: 2px solid blue;
+}
+[href^="https"] {
+    color: green;
+}
+
+/* Pseudo-classes */
+li:hover {
+    background-color: lightgray;
+}
+li:nth-child(odd) {
+    font-weight: bold;
+}
+
+/* Pseudo-elements */
+p::before {
+    content: "-> ";
+}
+
+/* Combinators */
+div > p { /* Child */
+    color: purple;
+}
+div + p { /* Adjacent Sibling */
+    font-style: italic;
+}
