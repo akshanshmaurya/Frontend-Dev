@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>State Selectors — Examples</title>
+  <link rel="stylesheet" href="example.css">
+</head>
+<body>
+  <header>
+    <h1>CSS State Selectors</h1>
+   <!-- <p class="intro">Demonstrations of <code>:hover</code>, <code>:focus</code>, <code>:active</code>, and <code>:nth-child()</code> applied to links, buttons, and list items. Use Tab to test focus.</p> -->
+  </header>
+
+  <main class="page">
+    <!-- Links demo -->
+    <section class="example">
+      <div class="demo links">
+        <h3>Links</h3>
+        <nav>
+          <a href="#" class="primary">Primary link</a>
+          <a href="#" class="secondary">Secondary</a>
+        </nav>
+      </div>
+      <div class="explain">
+        <p>Hover the link to change background and border. Focus (Tab) shows a visible outline for keyboard users. Active provides press feedback. These improve affordance and accessibility.</p>
+      </div>
+    </section>
+
+    <!-- Buttons demo -->
+    <section class="example">
+      <div class="demo buttons">
+        <h3>Buttons</h3>
+        <div class="controls">
+          <button class="btn primary">Primary</button>
+          <button class="btn ghost">Ghost</button>
+        </div>
+      </div>
+      <div class="explain">
+        <p>Buttons show a color fill on hover and subtle transform on active. Focus outlines are preserved for keyboard accessibility.</p>
+      </div>
+    </section>
+
+    <!-- List demo -->
+    <section class="example">
+      <div class="demo list">
+        <h3>List items (nth-child)</h3>
+        <ul class="items" aria-label="demo list">
+          <li tabindex="0">Item one</li>
+          <li tabindex="0">Item two</li>
+          <li tabindex="0">Item three (nth-child(3) highlighted)</li>
+          <li tabindex="0">Item four</li>
+        </ul>
+      </div>
+      <div class="explain">
+        <p>List items use <code>:hover</code> and <code>:focus</code>. <code>:nth-child()</code> styles odd/even rows and specifically highlights the third item to demonstrate positional selectors.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="center">Class Task — State Selectors Example</p>
+  </footer>
+</body>
+</html>

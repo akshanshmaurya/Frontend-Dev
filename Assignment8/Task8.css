@@ -1,0 +1,24 @@
+/* Task8.css - Box-Sizing Comparison
+   Left: default content-box; Right: border-box. Both have same declared width and padding
+   to visualize how total size differs.
+*/
+/* Note: we deliberately avoid forcing global box-sizing here so the page can
+   demonstrate the default content-box behavior. The left example uses content-box
+   explicitly, while the right example uses border-box.
+*/
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;padding:2rem;background:#fbfdff;color:#0b1220}
+.compare{max-width:1000px;margin:0 auto;display:flex;gap:1rem;align-items:flex-start}
+.box{flex:1;background:#fff;padding:1rem;border-radius:10px;box-shadow:0 8px 20px rgba(2,6,23,0.05)}
+.inner{width:280px;padding:24px;border:4px solid #e6eef8;background:#f8fafc;box-sizing:content-box}
+
+/* For the border-box example we explicitly set box-sizing:border-box on the inner element */
+.inner.borderbox{box-sizing:border-box}
+
+.note{color:#64748b;margin-top:0.6rem}
+
+@media (max-width:800px){.compare{flex-direction:column}}
+
+/* Comments:
+ - When box-sizing is content-box (default), padding and border are added outside the width.
+ - With border-box, padding and border are included inside the width.
+*/

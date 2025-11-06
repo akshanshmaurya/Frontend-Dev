@@ -1,0 +1,60 @@
+/* ToolTipDemo.css
+   Extracted from ToolTipDemo.html - contains all styles for the tooltip demo.
+   Tooltips use absolute positioning and opacity+transform transitions for a smooth fade/slide (0.3s).
+*/
+:root{--bg:#f7fbff;--card:#fff;--accent:#0b72b9;--muted:#475569}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Arial, sans-serif;background:var(--bg);color:#0b1220;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+
+main{width:100%;max-width:900px;background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+h1{margin:0 0 0.5rem;font-size:1.25rem}
+p.lead{margin:0 0 1rem;color:var(--muted)}
+
+/* Tooltip container: inline-block so absolute placement is relative to this element */
+.row{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.tooltip{position:relative;display:inline-block}
+
+/* Tooltip text: absolutely positioned and initially hidden via opacity
+   Transition uses opacity and transform for a smooth fade+slide effect. */
+.tooltip .tip{
+  position:absolute;left:50%;transform:translateX(-50%) translateY(6px);
+  bottom:100%;
+  white-space:nowrap;
+  background:rgba(15,23,36,0.95);color:#fff;padding:0.45rem 0.6rem;border-radius:6px;font-size:0.86rem;
+  opacity:0;pointer-events:none;transition:opacity 0.3s ease-in-out,transform 0.3s ease-in-out;z-index:20
+}
+
+/* Variants: top, bottom, left, right placements */
+.tooltip.top .tip{bottom:100%;left:50%;transform:translateX(-50%) translateY(6px)}
+.tooltip.bottom .tip{top:100%;bottom:auto;left:50%;transform:translateX(-50%) translateY(-6px)}
+.tooltip.left .tip{right:100%;left:auto;top:50%;transform:translateY(-50%) translateX(6px)}
+.tooltip.right .tip{left:100%;top:50%;transform:translateY(-50%) translateX(-6px)}
+
+/* Arrow using pseudo-element */
+.tip::after{content:"";position:absolute;left:50%;transform:translateX(-50%);bottom:-6px;border-width:6px;border-style:solid;border-color:rgba(15,23,36,0.95) transparent transparent transparent}
+.tooltip.bottom .tip::after{top:-12px;bottom:auto;border-color:transparent transparent rgba(15,23,36,0.95) transparent}
+.tooltip.left .tip::after{left:auto;right:-12px;top:50%;transform:translateY(-50%);border-color:transparent transparent transparent rgba(15,23,36,0.95)}
+.tooltip.right .tip::after{left:-12px;top:50%;transform:translateY(-50%);border-color:transparent rgba(15,23,36,0.95) transparent transparent}
+
+/* Show tooltip on hover and focus-visible for keyboard support */
+.tooltip:hover .tip,
+.tooltip:focus-within .tip,
+.tooltip:focus .tip,
+.tooltip .trigger:focus + .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* For left/right variants we need to remove X translation when showing */
+.tooltip.left:hover .tip,.tooltip.left:focus-within .tip{transform:translateY(-50%) translateX(0)}
+.tooltip.right:hover .tip,.tooltip.right:focus-within .tip{transform:translateY(-50%) translateX(0)}
+
+/* Trigger style */
+.trigger{display:inline-block;padding:0.5rem 0.75rem;border-radius:8px;border:1px solid #e6eef8;background:#fff;cursor:pointer}
+.trigger:focus{outline:3px solid rgba(11,114,185,0.18);outline-offset:4px}
+
+/* Small responsive tweak */
+@media (max-width:560px){.row{justify-content:center}}
+
+/* Comments:
+ - The .tooltip element is position:relative so .tip can be positioned absolutely.
+ - Opacity + transform transitions create a subtle fade-and-slide effect.
+ - Use :focus-within/:focus to support keyboard users without JS.
+*/

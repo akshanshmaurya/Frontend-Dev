@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Image Showcase</title>
+  <link rel="stylesheet" href="Image-showcase.css">
+</head>
+<body>
+  <header>
+    <h1>Image Showcase</h1>
+    <p class="lead">Six images displayed in a responsive grid. Hover to scale and reveal a dark overlay; captions are provided with <code>&lt;figcaption&gt;</code>.</p>
+  </header>
+  <h1>
+    Flower Gallery
+  </h1>
+  
+
+  <main>
+    <section class="gallery" aria-label="Image showcase gallery">
+      <figure class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?w=1200&q=60" alt="Mountain landscape at sunrise">
+        <figcaption>Mountain Sunrise</figcaption>
+      </figure>
+
+      <figure class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1200&q=60" alt="Forest path with sunlight">
+        <figcaption>Forest Path</figcaption>
+      </figure>
+
+      <figure class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d?w=1200&q=60" alt="City skyline at dusk">
+        <figcaption>City Skyline</figcaption>
+      </figure>
+
+      <figure class="card" tabindex="0">
+        <img src="data:image/jpeg;base64,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" alt="Desert dunes and sky">
+        <figcaption>Desert Dunes</figcaption>
+      </figure>
+
+      <figure class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=1200&q=60" alt="Calm sea and horizon">
+        <figcaption>Sea Horizon</figcaption>
+      </figure>
+
+      <figure class="card" tabindex="0">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=60" alt="Close-up of a flower">
+        <figcaption>Flower Close-up</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <p class="center">Image Showcase — responsive grid with hover effects</p>
+  </footer>
+</body>
+</html>

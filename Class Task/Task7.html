@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>UI Components</title>
+  <link rel="stylesheet" href="Task7.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>UI Components</h1>
+      <p class="lede">Search bar, buttons and dropdown menu with consistent styling. Focus and hover states included.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="ui-card">
+      <h2>Search + Actions</h2>
+
+      <form class="search-row" role="search" aria-label="Site search">
+        <label for="q" class="visually-hidden">Search</label>
+        <div class="search-wrap">
+          <input id="q" type="search" placeholder="Search articles, tutorials..." class="input input--search">
+          <select class="input input--select" aria-label="Filter results">
+            <option value="all">All</option>
+            <option value="articles">Articles</option>
+            <option value="videos">Videos</option>
+            <option value="courses">Courses</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn--primary">Search</button>
+          <button type="button" class="btn btn--outline">Reset</button>
+        </div>
+      </form>
+
+      <hr>
+
+      <h3>Dropdown menu (styled)</h3>
+      <div class="dropdown">
+        <label for="menu" class="visually-hidden">Choose option</label>
+        <select id="menu" class="input input--select">
+          <option selected>Choose...</option>
+          <option>Option A</option>
+          <option>Option B</option>
+          <option>Option C</option>
+        </select>
+      </div>
+
+      <p class="note">All form controls share consistent padding, border-radius and box-shadow. Use <kbd>Tab</kbd> to see focus outlines.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">UI Components</div>
+  </footer>
+</body>
+</html>

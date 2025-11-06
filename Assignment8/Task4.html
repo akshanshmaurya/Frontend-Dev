@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Selectors Practice</title>
+  <link rel="stylesheet" href="Task4.css">
+</head>
+<body>
+  <header>
+    <h1>Selectors Practice</h1>
+  </header>
+  <main class="container">
+    <section>
+  <h2>Element, Class, ID</h2>
+  <p id="intro" class="adj">This is a paragraph (element selector).</p>
+      <p class="highlight">This paragraph uses a .highlight class.</p>
+      <p id="special" class="highlight">This has both ID and class.</p>
+    </section>
+
+    <section>
+      <h2>Attribute selector</h2>
+      <input type="text" placeholder="type=text matches [type=\"text\"]">
+      <a href="https://secure.example.com">https link (href^=https)</a>
+    </section>
+
+    <section>
+      <h2>Combinators</h2>
+      <ul>
+        <li>Parent > Child example
+          <ul>
+            <li>Child item</li>
+          </ul>
+        </li>
+        <li>Sibling a + b</li>
+        <li>General sibling a ~ b</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>Comments in CSS explain each selector used.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,31 @@
+:root{--bg:#f6f8fb;--card:#fff;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);color:#0b1220;margin:0}
+.container{max-width:900px;margin:0 auto;padding:1rem}
+.site-header{padding:1rem 0;border-bottom:1px solid rgba(11,30,60,0.04)}
+.site-header h1{margin:0;font-size:1.4rem}
+.lede{margin:0.25rem 0;color:var(--muted)}
+
+.compare{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 12px 30px rgba(10,24,48,0.06);margin:1rem 0}
+.explain{margin-bottom:1rem;color:var(--muted)}
+
+.boxes{display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start}
+.box{flex:1 1 280px;border-radius:10px;padding:1rem;text-align:center}
+
+
+.demo-default{background:linear-gradient(180deg,#fff8f0,#fffefc);border:8px solid #ffd7ba}
+.demo-default .content{width:200px;padding:20px;border:8px solid rgba(255,160,100,0.14);margin:0 auto;background:#fff}
+
+.demo-border-box{background:linear-gradient(180deg,#f2faf3,#f8fff9);border:8px solid #cdefda}
+.demo-border-box .content{box-sizing:border-box;width:200px;padding:20px;border:8px solid rgba(10,140,90,0.08);margin:0 auto;background:#fff}
+
+.box h2{margin-top:0}
+
+.note{color:var(--muted);margin-top:0.75rem}
+
+@media (max-width:640px){
+  .boxes{flex-direction:column}
+  .box{flex:1 1 auto}
+}
+
+.site-footer{padding:1rem;text-align:center;color:var(--muted)}

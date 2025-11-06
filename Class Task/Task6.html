@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task6 — CSS Animation Demo</title>
+  <link rel="stylesheet" href="Task6.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>CSS Animation Demo</h1>
+      <p class="lede">Three animated examples: moving box, bouncing ball, and gentle pulse. Uses @keyframes, delays, iteration counts and directions.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="anim-grid">
+      <article class="anim-card">
+        <h2>Moving Box</h2>
+        <div class="anim-area">
+          <div class="moving-box" aria-hidden="true"></div>
+        </div>
+        <p class="note">Animation: translates horizontally using <code>translateX</code>. Runs infinitely.</p>
+      </article>
+
+      <article class="anim-card">
+        <h2>Bouncing Ball</h2>
+        <div class="anim-area">
+          <div class="ball" aria-hidden="true"></div>
+        </div>
+        <p class="note">Animation: vertical bounce with <code>alternate</code> direction and eased timing.</p>
+      </article>
+
+      <article class="anim-card">
+        <h2>Pulse</h2>
+        <div class="anim-area">
+          <div class="pulse" aria-hidden="true"></div>
+        </div>
+        <p class="note">Animation: scaling pulse with delay to stagger the motion.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">CSS Animation Demo</div>
+  </footer>
+</body>
+</html>

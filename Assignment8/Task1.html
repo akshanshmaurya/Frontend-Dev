@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task1: Pseudo-Classes</title>
+  <link rel="stylesheet" href="Task1.css">
+</head>
+<body>
+  <header>
+    <h1>Pseudo-Classes Demo</h1>
+    <p class="lead">Examples of :hover, :focus, :active, and :nth-child() on links, buttons, and list items.</p>
+  </header>
+
+  <main class="row">
+    <section class="card links">
+      <h2>Links</h2>
+      <nav>
+        <a href="#" class="primary">Primary link</a>
+        <a href="#" class="secondary">Secondary</a>
+      </nav>
+    </section>
+
+    <section class="card buttons">
+      <h2>Buttons</h2>
+      <div class="ctrls">
+        <button class="btn primary">Primary</button>
+        <button class="btn outline">Outline</button>
+        <button class="btn" disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section class="card list">
+      <h2>List Items</h2>
+      <ul class="items" aria-label="demo list">
+        <li tabindex="0">First</li>
+        <li tabindex="0">Second</li>
+        <li tabindex="0">Third</li>
+        <li tabindex="0">Fourth</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Short explanations: Hover changes color; Focus shows outline; Active gives press feedback; nth-child targets position-specific styling.</p>
+  </footer>
+</body>
+</html>

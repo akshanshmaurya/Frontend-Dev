@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CSS Selectors Practice</title>
+  <link rel="stylesheet" href="Selectors-Practice.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>CSS Selectors Practice</h1>
+      <p class="lede">Examples of element, class, ID, attribute and combinator selectors with short explanations.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="example">
+      <h2>Element selector</h2>
+      <p>This paragraph is targeted by the element selector <code>p { ... }</code>.</p>
+      <p>Element selectors match all elements of that type.</p>
+    </section>
+
+    <section class="example">
+      <h2>Class selector</h2>
+      <p class="highlight">This paragraph uses the <code>.highlight</code> class.</p>
+      <p class="badge highlight">Multiple classes work too: <code>.badge.highlight</code></p>
+    </section>
+
+    <section class="example">
+      <h2>ID selector</h2>
+      <p id="special">This paragraph has an ID and is styled with <code>#special</code>. IDs are unique per page.</p>
+    </section>
+
+    <section class="example">
+      <h2>Attribute selectors</h2>
+      <p>Links with <code>href</code> starting with <code>https</code> are selected with <code>a[href^="https"]</code>:</p>
+      <p><a href="https://example.com">Secure link (https)</a> — will be styled by the attribute selector.</p>
+      <p><a href="http://example.com">Non-secure link (http)</a> — not matched by the selector above.</p>
+
+      <form class="small-form">
+        <label for="email">Email (attribute selector):</label>
+        <input id="email" type="email" placeholder="you@example.com">
+        <label for="age">Age (presence of type attribute):</label>
+        <input id="age" type="number" placeholder="30">
+      </form>
+    </section>
+
+    <section class="example">
+      <h2>Combinators</h2>
+      <div class="combinator-demo">
+        <h3>Parent &gt; Child (direct child)</h3>
+        <div class="parent">
+          <p>Direct child &gt; matches this paragraph (immediate child of .parent).</p>
+          <div>
+            <p>Nested deeper — still a descendant but not a direct child.</p>
+          </div>
+        </div>
+
+        <h3>Adjacent sibling (+)</h3>
+        <h4>Heading</h4>
+        <p>Paragraph immediately after an <code>h4</code> — matched by <code>h4 + p</code>.</p>
+        <p>This paragraph is a sibling but not adjacent to the <code>h4</code>.</p>
+
+        <h3>General sibling (~)</h3>
+        <h4>Start</h4>
+        <p>First sibling matched by <code>h4 ~ p</code>.</p>
+        <p>Second sibling also matched by the general sibling selector.</p>
+
+        <h3>Descendant (space)</h3>
+        <div class="outer">
+          <div class="inner">
+            <p>Any <code>p</code> inside an .outer element is matched by <code>.outer p</code>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="example">
+      <h2>List & Combinator practical</h2>
+      <p>Using child combinator to style only top-level list items:</p>
+      <ul class="menu">
+        <li>Item 1</li>
+        <li>Item 2
+          <ul>
+            <li>Sub item A</li>
+            <li>Sub item B</li>
+          </ul>
+        </li>
+        <li>Item 3</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Selectors Practice — Created for Class Task. No JavaScript used.</p>
+    </div>
+  </footer>
+</body>
+</html>

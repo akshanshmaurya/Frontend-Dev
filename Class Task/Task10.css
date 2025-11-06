@@ -1,0 +1,37 @@
+/* Task10.css — Mini UI Layout
+   Header + main card + footer structure.
+   Card contains form and image; responsive with Flexbox.
+*/
+
+:root{--bg:#f4f7fb;--card:#ffffff;--accent:#1766d1;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;color:#0b1220}
+.container{max-width:960px;margin:0 auto;padding:1rem}
+.site-header{background:linear-gradient(90deg,#fff,#f3f7ff);border-bottom:1px solid rgba(11,30,60,0.04)}
+.site-header .container{padding:1rem}
+.site-header h1{margin:0;font-size:1.4rem}
+
+.main-card{padding:2rem 0}
+.card-inner{display:flex;gap:1rem;align-items:center;justify-content:space-between;background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 12px 36px rgba(10,24,48,0.06)}
+.card-form{flex:1 1 420px}
+.card-media{flex:0 0 240px;text-align:center}
+.card-media img{max-width:100%;display:block;border-radius:8px;border:1px solid rgba(10,24,48,0.04)}
+
+.card-form h2{margin-top:0;color:var(--accent)}
+.form{display:flex;flex-direction:column;gap:0.6rem}
+.input{padding:0.7rem;border-radius:10px;border:1px solid rgba(16,30,60,0.08);box-shadow:0 8px 20px rgba(10,24,48,0.04)}
+.input:focus{outline:3px solid rgba(23,102,209,0.14);outline-offset:3px}
+
+.form-actions{display:flex;gap:0.6rem;margin-top:0.6rem}
+.btn{padding:0.6rem 0.9rem;border-radius:10px;border:1px solid transparent;cursor:pointer;font-weight:700;transition:transform 140ms ease,box-shadow 160ms ease}
+.btn--primary{background:var(--accent);color:#fff;box-shadow:0 10px 28px rgba(23,102,209,0.12)}
+.btn--primary:hover{transform:translateY(-3px);box-shadow:0 22px 44px rgba(23,102,209,0.16)}
+.btn--outline{background:transparent;border:1px solid rgba(11,30,60,0.08)}
+.btn--outline:hover{background:rgba(11,30,60,0.04);transform:translateY(-2px)}
+
+@media (max-width:840px){
+  .card-inner{flex-direction:column;align-items:stretch}
+  .card-media{order:-1}
+}
+
+.site-footer{padding:1rem;text-align:center;color:var(--muted)}

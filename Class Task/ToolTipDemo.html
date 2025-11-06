@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Tooltip Demo</title>
+	<link rel="stylesheet" href="ToolTipDemo.css">
+</head>
+<body>
+	<main>
+		<h1>CSS-only Tooltip Demo</h1>
+		<p class="lead">Hover or focus each trigger to reveal a tooltip. Tooltips are positioned using absolute positioning and use opacity transitions (0.3s) for smooth fade-in.</p>
+
+		<div class="row" role="list">
+			<div class="tooltip top" role="listitem">
+				<button class="trigger" aria-describedby="tip1">Top</button>
+				<div id="tip1" class="tip" role="tooltip">Tooltip above the trigger</div>
+			</div>
+
+			<div class="tooltip bottom" role="listitem">
+				<button class="trigger" aria-describedby="tip2">Bottom</button>
+				<div id="tip2" class="tip" role="tooltip">Tooltip below the trigger</div>
+			</div>
+
+			<div class="tooltip left" role="listitem">
+				<button class="trigger" aria-describedby="tip3">Left</button>
+				<div id="tip3" class="tip" role="tooltip">Tooltip to the left</div>
+			</div>
+
+			<div class="tooltip right" role="listitem">
+				<button class="trigger" aria-describedby="tip4">Right</button>
+				<div id="tip4" class="tip" role="tooltip">Tooltip to the right</div>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+

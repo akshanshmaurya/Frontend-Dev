@@ -1,0 +1,46 @@
+/* Task9.css — Combined Effects Demo
+   Buttons grow + color change on hover with subtle shadow and Flexbox alignment.
+*/
+
+:root{--bg:#f7f9fc;--card:#fff;--primary:#1766d1;--accent:#d14b6b;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;color:#0b1220}
+.container{max-width:920px;margin:0 auto;padding:1rem}
+.site-header{padding:1rem 0;border-bottom:1px solid rgba(11,30,60,0.04)}
+.site-header h1{margin:0;font-size:1.4rem}
+.lede{margin:0.25rem 0;color:var(--muted)}
+
+.demo-card{background:var(--card);padding:1.25rem;border-radius:12px;box-shadow:0 10px 28px rgba(10,24,48,0.06);margin:1rem 0}
+.demo-card h2{margin-top:0}
+
+.btn-row{display:flex;gap:0.75rem;align-items:center}
+.demo-btn{padding:0.6rem 1rem;border-radius:10px;border:1px solid transparent;cursor:pointer;font-weight:700;transition:transform 180ms cubic-bezier(.2,.9,.3,1),box-shadow 220ms ease,background-color 160ms ease,color 160ms ease}
+.demo-btn:focus{outline:3px solid rgba(23,102,209,0.14);outline-offset:3px}
+.demo-btn:active{transform:translateY(1px) scale(0.99)}
+
+/* Primary: blue, grows on hover */
+.demo-btn.primary{background:var(--primary);color:#fff;box-shadow:0 8px 22px rgba(23,102,209,0.12)}
+.demo-btn.primary:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 20px 40px rgba(23,102,209,0.18)}
+
+/* Accent: red/pink */
+.demo-btn.accent{background:var(--accent);color:#fff;box-shadow:0 6px 18px rgba(209,75,107,0.12)}
+.demo-btn.accent:hover{transform:translateY(-4px) scale(1.06);box-shadow:0 22px 46px rgba(209,75,107,0.18)}
+
+/* Ghost: outline variant that inverts on hover */
+.demo-btn.ghost{background:transparent;border:2px solid rgba(11,30,60,0.08);color:var(--muted)}
+.demo-btn.ghost:hover{background:rgba(11,30,60,0.06);color:#0b1220;transform:translateY(-3px) scale(1.03)}
+
+/* Link styles */
+.demo-link{color:var(--primary);text-decoration:none;font-weight:600;transition:color 140ms ease,text-decoration 120ms ease}
+.demo-link:hover{color:darken(var(--primary),10%)}
+.demo-link:focus{outline:3px solid rgba(23,102,209,0.14);outline-offset:3px;text-decoration:underline}
+
+/* Fallback for darken(var()) above; since CSS doesn't support darken(), provide hover color explicit */
+.demo-link:hover{color:#114fa8}
+
+@media (max-width:520px){
+  .btn-row{flex-direction:column;align-items:stretch}
+  .demo-btn{width:100%}
+}
+
+.site-footer{padding:1rem;text-align:center;color:var(--muted)}

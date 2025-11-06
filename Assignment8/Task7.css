@@ -1,0 +1,22 @@
+/* Task7.css - UI Components Card
+   Simple card layout containing search, buttons, and dropdown styled consistently.
+*/
+:root{--bg:#f6fbff;--card:#fff;--accent:#0b72b9}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI, Arial, sans-serif;background:var(--bg);display:flex;align-items:center;justify-content:center;height:100vh}
+.card{background:var(--card);padding:1rem;border-radius:12px;box-shadow:0 12px 36px rgba(2,6,23,0.08);width:min(720px,95%)}
+.card-header{display:flex;gap:0.5rem;align-items:center}
+.search{flex:1;padding:0.6rem;border-radius:8px;border:1px solid #e6eef8}
+.btn{padding:0.6rem 0.9rem;border-radius:8px;border:2px solid var(--accent);background:var(--accent);color:#fff;cursor:pointer}
+.controls{display:flex;gap:0.8rem;margin-top:1rem;align-items:center}
+select{padding:0.5rem;border-radius:8px;border:1px solid #e6eef8}
+
+.btn:focus,.search:focus,select:focus{outline:3px solid rgba(59,130,246,0.14);outline-offset:3px}
+
+/* gentle gradient background inside the card */
+.card{background:linear-gradient(180deg, #ffffff, #fbfdff)}
+
+/* Comments:
+ - Keep consistent padding/radius/shadows for unified components.
+ - :focus highlights keyboard users.
+*/

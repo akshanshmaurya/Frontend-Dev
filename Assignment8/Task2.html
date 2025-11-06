@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Task2: Tooltips</title>
+  <link rel="stylesheet" href="Task2.css">
+</head>
+<body>
+  <header>
+    <h1>Tooltip Demonstration</h1>
+    <p class="lead">CSS-only tooltips using absolute positioning and opacity transitions (0.3s).</p>
+  </header>
+
+  <main class="center">
+    <div class="row">
+      <div class="tooltip" tabindex="0">
+        <span class="trigger">Hover me</span>
+        <span class="tip">Tooltip above</span>
+      </div>
+
+      <div class="tooltip bottom" tabindex="0">
+        <span class="trigger">Hover me</span>
+        <span class="tip">Tooltip below</span>
+      </div>
+
+      <div class="tooltip right" tabindex="0">
+        <span class="trigger">Hover me</span>
+        <span class="tip">Tooltip right</span>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="center">Tooltips are keyboard-focusable; focus shows the tooltip as well.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="Task8.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Box-Sizing Comparison</h1>
+      <p class="lede">Demonstrates the difference between the default box model and <code>box-sizing: border-box</code>.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="compare">
+      <div class="explain">
+        <p>Each example uses the <strong>same</strong> width and padding values. Notice how the total rendered size differs when the default box-sizing is used versus <code>border-box</code>, which includes padding and border in the element's declared width.</p>
+      </div>
+
+      <div class="boxes">
+        <div class="box demo-default">
+          <h2>Default box-sizing</h2>
+          <div class="content">Declared width: <code>200px</code><br>Padding: <code>20px</code><br>Border: <code>8px</code></div>
+        </div>
+
+        <div class="box demo-border-box">
+          <h2>box-sizing: border-box</h2>
+          <div class="content">Declared width: <code>200px</code><br>Padding included in width<br>Border included in width</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">Box-Sizing Comparison</div>
+  </footer>
+</body>
+</html>

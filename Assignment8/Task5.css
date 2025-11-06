@@ -1,0 +1,25 @@
+/* Task5.css - Styled Buttons
+   Multiple button styles with hover, active, focus, and disabled states.
+*/
+:root{--bg:#fbfdff;--accent:#0b72b9;--muted:#64748b}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;background:var(--bg);color:#0b1220;padding:2rem}
+.center{max-width:900px;margin:0 auto;display:flex;justify-content:center}
+.buttons{display:flex;gap:0.8rem;align-items:center}
+.btn{padding:0.6rem 1rem;border-radius:8px;border:2px solid transparent;cursor:pointer;transition:all 0.2s ease;font-weight:600}
+.btn.primary{background:var(--accent);color:#fff;border-color:transparent;box-shadow:0 8px 20px rgba(11,114,185,0.12)}
+.btn.primary:hover{transform:translateY(-3px)}
+.btn.secondary{background:#f1f5f9;color:#0b1220;border-color:#d1d5db}
+.btn.secondary:hover{background:#e2e8f0}
+.btn.outline{background:transparent;color:var(--accent);border-color:var(--accent)}
+.btn.outline:hover{background:var(--accent);color:#fff}
+.btn:focus{outline:3px solid rgba(59,130,246,0.18);outline-offset:3px}
+.btn:active{transform:scale(0.98)}
+.btn:disabled{opacity:0.5;cursor:not-allowed;transform:none}
+
+@media (max-width:680px){.buttons{flex-direction:column;align-items:stretch}}
+
+/* Comments:
+ - Use :focus to provide keyboard visibility.
+ - :disabled prevents pointer interactions and should be visually apparent.
+*/

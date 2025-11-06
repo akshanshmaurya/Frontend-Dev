@@ -1,0 +1,48 @@
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --primary:#1766d1;
+  --primary-contrast:#fff;
+  --secondary:#0b6b5f;
+  --outline:#2b3a4a;
+  --muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Roboto, Arial, sans-serif;background:var(--bg);margin:0;color:#0b1220}
+.container{max-width:900px;margin:0 auto;padding:1rem}
+.site-header{background:linear-gradient(90deg,#fff,#f3f7ff);border-bottom:1px solid #e6eefb}
+.site-header .container{padding:1rem}
+.site-header h1{margin:0;font-size:1.4rem}
+.lede{margin:0.25rem 0;color:var(--muted)}
+
+.card{background:var(--card);padding:1.25rem;border-radius:10px;box-shadow:0 6px 20px rgba(18,30,60,0.06);margin:1rem 0}
+
+/* Button base styles */
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:10px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:box-shadow 200ms ease,transform 120ms ease,background-color 160ms ease,color 160ms ease;box-shadow:0 6px 14px rgba(16,24,40,0.06)}
+.btn:focus{outline:3px solid rgba(23,102,209,0.18);outline-offset:3px}
+.btn:active{transform:translateY(1px)}
+.btn[disabled], .btn:disabled{opacity:0.5;cursor:not-allowed;box-shadow:none;transform:none}
+
+/* Primary button */
+.btn--primary{background:var(--primary);color:var(--primary-contrast)}
+.btn--primary:hover{box-shadow:0 12px 30px rgba(23,102,209,0.15);transform:translateY(-3px)}
+.btn--primary:active{transform:translateY(0)}
+
+/* Secondary button */
+.btn--secondary{background:var(--secondary);color:#fff}
+.btn--secondary:hover{box-shadow:0 12px 30px rgba(11,107,95,0.12);transform:translateY(-3px)}
+
+/* Outline variant */
+.btn--outline{background:transparent;border:1px solid var(--outline);color:var(--outline)}
+.btn--outline:hover{background:rgba(43,58,74,0.06);transform:translateY(-2px)}
+
+/* Button row: horizontally aligned and responsive via Flexbox */
+.btn-row{display:flex;gap:0.75rem;align-items:center;flex-wrap:wrap;margin-top:0.75rem}
+
+/* Small screens: make buttons full width for easier tap targets */
+@media (max-width:480px){
+  .btn-row{flex-direction:column}
+  .btn{width:100%;text-align:center}
+}
+
+.site-footer{padding:1rem;text-align:center;color:var(--muted)}

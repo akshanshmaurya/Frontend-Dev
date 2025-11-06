@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Box-Sizing Comparison</title>
+  <link rel="stylesheet" href="Task8.css">
+</head>
+<body>
+  <main class="compare">
+    <section class="box model-default">
+      <h2>Default box-sizing (content-box)</h2>
+      <div class="inner">content</div>
+      <p class="note">Width + padding + border increases total element size.</p>
+    </section>
+
+    <section class="box model-border">
+      <h2>border-box</h2>
+      <div class="inner borderbox">content</div>
+      <p class="note">Padding and border are included within the specified width.</p>
+    </section>
+  </main>
+</body>
+</html>

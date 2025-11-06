@@ -1,0 +1,32 @@
+/* Task2.css - Tooltip Demonstration (CSS-only)
+   Tooltips use absolute positioning and opacity transitions for smooth fade (0.3s)
+*/
+:root{--bg:#fbfdff;--card:#fff;--accent:#0b72b9}
+*{box-sizing:border-box}
+body{font-family:Segoe UI, Arial, sans-serif;margin:0;background:var(--bg);color:#0b1220;padding:2rem}
+header{max-width:900px;margin:0 auto}
+.lead{color:#64748b}
+.center{max-width:900px;margin:1rem auto;display:flex;justify-content:center}
+.row{display:flex;gap:1rem;align-items:center}
+
+.tooltip{position:relative;display:inline-block}
+.trigger{display:inline-block;padding:0.45rem 0.8rem;background:var(--card);border-radius:8px;border:1px solid #e6eef8;cursor:pointer}
+
+.tip{position:absolute;left:50%;transform:translateX(-50%) translateY(8px);bottom:100%;background:rgba(2,6,23,0.95);color:#fff;padding:0.4rem 0.6rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity 0.3s ease-in-out,transform 0.3s ease-in-out;z-index:10}
+.tooltip.bottom .tip{top:100%;bottom:auto;transform:translateX(-50%) translateY(-8px)}
+.tooltip.right .tip{left:100%;top:50%;transform:translateY(-50%) translateX(-8px)}
+
+/* Show tooltip on hover or focus */
+.tooltip:hover .tip,.tooltip:focus-within .tip,.tooltip:focus .tip{opacity:1;transform:translateX(-50%) translateY(0)}
+.tooltip.right:hover .tip,.tooltip.right:focus-within .tip{transform:translateY(-50%) translateX(0)}
+
+/* Make element keyboard focusable */
+.tooltip{outline:none}
+.tooltip:focus .trigger{box-shadow:0 6px 18px rgba(11,114,185,0.12);outline:3px solid rgba(59,130,246,0.12);outline-offset:3px}
+
+@media (max-width:680px){.row{flex-direction:column}}
+
+/* Comments:
+ - Using :focus-within keeps tooltips accessible without JS.
+ - Transition on opacity+transform provides smooth fade-and-slide.
+*/
