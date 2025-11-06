@@ -1,0 +1,76 @@
+/* Core layout styling */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f6f9ff 0%, #eef2ff 100%);
+    color: #1a1c24;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    background-color: #2b2d42;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Flexbox row of cards */
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.info-card {
+    flex: 1 1 calc(25% - 1.5rem);
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 24px rgba(43, 45, 66, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.info-card:hover {
+    background-color: #edf2ff;
+    transform: translateY(-6px);
+}
+
+.info-card h3 {
+    margin-top: 0;
+}
+
+/* Tablet breakpoint: 2 columns */
+@media (max-width: 900px) {
+    .info-card {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
+
+/* Mobile breakpoint: single column */
+@media (max-width: 600px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .info-card {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Summary</title>
+    <link rel="stylesheet" href="responsive-dashboard-summary.css">
+</head>
+<body>
+    <header class="dashboard-header">
+        <h1>Responsive Dashboard Summary</h1>
+    </header>
+
+    <main class="dashboard-layout">
+        <aside class="sidebar" aria-label="Dashboard summary navigation">
+            <h2>Navigation</h2>
+            <ul>
+                <li><a href="#filters">Filters</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#media-queries">Media Queries</a></li>
+                <li><a href="#cheatsheet">Cheat Sheet</a></li>
+            </ul>
+        </aside>
+
+        <section class="main-content" aria-labelledby="dashboard-cards">
+            <h2 id="dashboard-cards">Responsive Highlights</h2>
+            <div class="card-grid">
+                <article id="filters" class="dash-card">
+                    <h3>Filters</h3>
+                    <p>Animate imagery with <code>filter</code> and transitions for interactive effects.</p>
+                </article>
+                <article id="typography" class="dash-card">
+                    <h3>Typography</h3>
+                    <p>Scale copy with <code>clamp()</code> and fluid spacing for readable text.</p>
+                </article>
+                <article id="media-queries" class="dash-card">
+                    <h3>Media Queries</h3>
+                    <p>Trigger layout shifts using targeted breakpoints like 750px and 600px.</p>
+                </article>
+                <article id="cheatsheet" class="dash-card">
+                    <h3>Cheat Sheet Links</h3>
+                    <p>Collect go-to snippets for responsive layouts, filters, and animation patterns.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="dashboard-footer">
+        <p>Responsive dashboard demo with Grid and Flexbox</p>
+    </footer>
+</body>
+</html>

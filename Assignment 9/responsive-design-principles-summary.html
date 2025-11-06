@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Principles Summary</title>
+    <link rel="stylesheet" href="responsive-design-principles-summary.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Design Principles</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="principles-heading">
+            <h2 id="principles-heading">Core Concepts</h2>
+            <div class="principles-grid">
+                <article class="principle">
+                    <h3>Fluid Layouts</h3>
+                    <p>Use percentage-based widths to let containers expand or shrink with the viewport.</p>
+                    <pre><code>.container { width: 90%; margin: 0 auto; }</code></pre>
+                </article>
+                <article class="principle">
+                    <h3>Flexible Media</h3>
+                    <p>Keep images inside their parent with max-width: 100% and auto height.</p>
+                    <pre><code>img { max-width: 100%; height: auto; }</code></pre>
+                </article>
+                <article class="principle">
+                    <h3>Breakpoints</h3>
+                    <p>Introduce media queries where layout shifts improve usability.</p>
+                    <pre><code>@media (max-width: 768px) { ... }</code></pre>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Responsive design summary reference</p>
+    </footer>
+</body>
+</html>

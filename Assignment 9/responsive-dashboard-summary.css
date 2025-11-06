@@ -1,0 +1,132 @@
+@keyframes loadFade {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f3f5f9;
+    color: #1d2330;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.dashboard-header,
+.dashboard-footer {
+    background-color: #1d2330;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+.dashboard-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-areas:
+        "sidebar main";
+    gap: 2rem;
+    padding: 2.5rem 2rem;
+    flex: 1 0 auto;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 1.75rem;
+    box-shadow: 0 16px 30px rgba(29, 35, 48, 0.12);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.sidebar a {
+    color: #1d2330;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.sidebar a:hover,
+.sidebar a:focus {
+    color: #3a6ff2;
+}
+
+.main-content {
+    grid-area: main;
+    background-color: #ffffff;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 18px 36px rgba(29, 35, 48, 0.14);
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+.card-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 1.5rem;
+}
+
+.dash-card {
+    background-color: #f8faff;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 12px 24px rgba(58, 111, 242, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: loadFade 0.7s ease both;
+}
+
+.dash-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(58, 111, 242, 0.2);
+}
+
+.dash-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.dash-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.dash-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+@media (max-width: 750px) {
+    .dashboard-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "sidebar"
+            "main";
+        padding: 2rem 1.25rem;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,85 @@
+/* Page scaffolding */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f9;
+    color: #1a202c;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header,
+footer {
+    text-align: center;
+    background-color: #1a202c;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+.comparison {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.comparison h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Flex layout for side-by-side images */
+.comparison-row {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+figure {
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 18px 32px rgba(26, 32, 44, 0.12);
+    transition: transform 0.3s ease;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figure figcaption {
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-weight: 600;
+}
+
+.filtered img {
+    filter: brightness(0.6) contrast(1.2);
+    transition: filter 0.4s ease;
+}
+
+.filtered:hover img {
+    filter: none;
+}
+
+figure:hover {
+    transform: translateY(-6px);
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 2rem 1.25rem;
+    }
+
+    .comparison-row {
+        flex-direction: column;
+    }
+}

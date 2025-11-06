@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Comparison Layout</title>
+    <link rel="stylesheet" href="filter-comparison-layout.css">
+</head>
+<body>
+    <header>
+        <h1>Filter Comparison Layout</h1>
+    </header>
+
+    <main>
+        <section class="comparison" aria-labelledby="comparison-title">
+            <h2 id="comparison-title">Before and After Imagery</h2>
+            <div class="comparison-row">
+                <figure>
+                    <img src="https://picsum.photos/id/1062/500/350" alt="Original landscape" loading="lazy">
+                    <figcaption>Original</figcaption>
+                </figure>
+                <figure class="filtered">
+                    <img src="https://picsum.photos/id/1062/500/350" alt="Filtered landscape" loading="lazy">
+                    <figcaption>Adjusted Brightness</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Hover the filtered image to see the difference.</p>
+    </footer>
+</body>
+</html>

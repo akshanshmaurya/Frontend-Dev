@@ -1,0 +1,63 @@
+/* General layout alignment */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #faf8f5;
+    color: #2f2a2a;
+}
+
+header,
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #2f2a2a;
+    color: #fff;
+}
+
+main {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.copy-block {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 18px 45px rgba(47, 42, 42, 0.1);
+}
+
+.copy-block h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    margin-top: 0;
+}
+
+.copy-block .lead {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 1.5rem;
+    }
+
+    .copy-block {
+        padding: 1.75rem;
+        line-height: 1.7;
+    }
+
+    .copy-block .lead {
+        line-height: 1.8;
+        letter-spacing: 0.01em;
+    }
+}
