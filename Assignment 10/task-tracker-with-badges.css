@@ -1,0 +1,8 @@
+body {
+    background: linear-gradient(120deg, #f8fbff, #eef5ff);
+    font-family: "Manrope", "Segoe UI", sans-serif;
+}
+
+.list-group-item {
+    font-size: 1.05rem;
+}

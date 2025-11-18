@@ -1,0 +1,9 @@
+body {
+    background-color: #fcfcfd;
+    font-family: "Source Sans 3", "Segoe UI", sans-serif;
+}
+
+article {
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 1rem;
+}

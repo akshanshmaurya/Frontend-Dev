@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="notifications-dashboard.css">
+</head>
+<body class="bg-body-tertiary">
+    <header class="py-4 text-center bg-dark text-white">
+        <div class="container">
+            <h1 class="h3 mb-0">Inbox & Alerts</h1>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <section class="container">
+            <div class="card shadow border-0">
+                <div class="card-body p-4">
+                    <h2 class="h5 mb-4">Latest Updates</h2>
+                    <!-- Alert variations highlight contextual messages -->
+                    <div class="alert alert-success" role="alert">
+                        ✔️ New message from Priya — she shared the sprint doc.
+                    </div>
+                    <div class="alert alert-info" role="alert">
+                        ℹ️ Tip: Enable reminders to never miss a stand-up.
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        ⚠️ Warning: Storage is nearing capacity. Archive files soon.
+                    </div>
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <!-- .alert-dismissible adds spacing for the close button -->
+                        🔔 Heads up: Security review starts Monday.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="summary-well bg-light border rounded-4 p-4 mt-4">
+                <h3 class="h6 text-uppercase text-muted">Activity Summary</h3>
+                <p class="mb-1"><strong>7</strong> unread messages</p>
+                <p class="mb-0"><strong>3</strong> pending approvals</p>
+            </section>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center">
+        <p class="mb-0 text-muted">Stay focused — notifications refresh every 15 minutes.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

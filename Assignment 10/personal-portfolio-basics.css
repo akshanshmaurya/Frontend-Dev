@@ -1,0 +1,15 @@
+body {
+    font-family: "Nunito", "Segoe UI", sans-serif;
+}
+
+header {
+    background: linear-gradient(135deg, #dfe9ff, #f9f9f9);
+}
+
+img.rounded-circle {
+    border: 6px solid #ffffff;
+}
+
+form button {
+    letter-spacing: 0.04em;
+}

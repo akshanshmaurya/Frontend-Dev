@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wanderly Travel — Showcase</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="travel-agency-showcase.css">
+</head>
+<body>
+    <header class="py-4 bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="h3 mb-0">Wanderly Travel Co.</h1>
+            <p class="mb-0">Curated escapes across the globe.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <section class="container">
+            <!-- Carousel uses Bootstrap JS bundle for slide controls -->
+            <div id="destinationsCarousel" class="carousel slide mb-4" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Bali"></button>
+                    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="1" aria-label="Swiss Alps"></button>
+                    <button type="button" data-bs-target="#destinationsCarousel" data-bs-slide-to="2" aria-label="Morocco"></button>
+                </div>
+                <div class="carousel-inner rounded-4 shadow">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="https://picsum.photos/id/1069/1200/500" class="d-block w-100" alt="Bali beach">
+                        <div class="carousel-caption text-start">
+                            <h2 class="h3">Bali Sunrise</h2>
+                            <p>Wellness retreats plus island hopping itineraries.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="https://picsum.photos/id/1018/1200/500" class="d-block w-100" alt="Swiss Alps">
+                        <div class="carousel-caption">
+                            <h2 class="h3">Swiss Alps Rail</h2>
+                            <p>Panoramic trains, chocolate tastings, alpine stays.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4500">
+                        <img src="https://picsum.photos/id/1001/1200/500" class="d-block w-100" alt="Morocco dunes">
+                        <div class="carousel-caption text-end">
+                            <h2 class="h3">Moroccan Caravan</h2>
+                            <p>Desert campfires and Marrakech rooftop dinners.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#destinationsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <div class="mb-3 d-flex justify-content-between align-items-center">
+                <h2 class="h5 mb-0">Booking Progress</h2>
+                <span class="text-muted">70% complete</span>
+            </div>
+            <!-- Bootstrap progress bar utilities -->
+            <div class="progress" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 70%"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center bg-dark text-white">
+        <p class="mb-0">Call +1 (555) 014-9876 · hello@wanderly.travel</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

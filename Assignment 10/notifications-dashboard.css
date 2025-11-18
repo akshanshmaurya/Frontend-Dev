@@ -1,0 +1,7 @@
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.summary-well p {
+    letter-spacing: 0.02em;
+}

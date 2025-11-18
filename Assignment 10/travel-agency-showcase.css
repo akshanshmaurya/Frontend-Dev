@@ -1,0 +1,10 @@
+body {
+    font-family: "Montserrat", "Segoe UI", sans-serif;
+    background-color: #f4f8fb;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 1rem;
+    padding: 1rem 1.25rem;
+}

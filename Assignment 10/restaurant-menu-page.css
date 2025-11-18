@@ -1,0 +1,13 @@
+body {
+    background-color: #fdfcf8;
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+}
+
+table {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.list-group-item {
+    font-size: 1.05rem;
+}
