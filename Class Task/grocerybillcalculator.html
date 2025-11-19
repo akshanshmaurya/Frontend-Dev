@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Bill Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Grocery Bill Calculator</h1>
+    <form id="bill">
+        <label for = "Price">Enter the price of the grocery item:</label><br>
+        <input type="number" id="Price" name="Price" min="0" step="0.01" required><br><br>
+        <label for = "Quantity">Enter the quantity of the grocery item:</label><br>
+        <input type="number" id="Quantity" name="Quantity" min="0" step="1" required><br><br>
+        <input type="button" value="Calculate Total Bill" onclick="calculateGroceryBill()"><br><br>
+        <label for = "TotalBill">Total Bill Amount:</label><br>
+        <input type="text" id="TotalBill" name="TotalBill" readonly><br><br>
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
