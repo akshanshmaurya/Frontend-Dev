@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Form Builder</title>
+    <link rel="stylesheet" href="FormBuilder.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔧 Dynamic Form Builder</h1>
+            <p>Create forms dynamically from field definitions</p>
+        </header>
+
+        <main>
+            <section class="builder-section">
+                <h2>Form Configuration</h2>
+                <div class="config-options">
+                    <button class="btn" onclick="buildLoginForm()">Build Login Form</button>
+                    <button class="btn" onclick="buildContactForm()">Build Contact Form</button>
+                    <button class="btn" onclick="buildSurveyForm()">Build Survey Form</button>
+                    <button class="btn btn-danger" onclick="clearForm()">Clear Form</button>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Generated Form</h2>
+                <div id="formContainer"></div>
+            </section>
+
+            <section class="output-section">
+                <h2>Form Data Output</h2>
+                <div id="outputContainer" class="output-box"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="FormBuilder.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="LibraryManagement.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Library Management System</h1>
+            <p>Manage books and issue/return operations</p>
+        </header>
+
+        <main>
+            <div class="layout">
+                <section class="sidebar">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-group">
+                        <input type="text" id="isbnSearch" placeholder="Search by ISBN" class="search-input">
+                        <button onclick="searchAndIssueBook()" class="btn">Issue Book</button>
+                    </div>
+
+                    <div class="actions-group">
+                        <input type="text" id="returnIsbn" placeholder="Return by ISBN" class="search-input">
+                        <button onclick="returnBook()" class="btn btn-secondary">Return Book</button>
+                    </div>
+
+                    <button onclick="loadSampleBooks()" class="btn btn-info">Load Sample Books</button>
+                </section>
+
+                <section class="content">
+                    <div class="tabs">
+                        <button class="tab-btn active" onclick="switchTab('available')">📖 Available Books</button>
+                        <button class="tab-btn" onclick="switchTab('issued')">✋ Issued Books</button>
+                        <button class="tab-btn" onclick="switchTab('all')">📚 All Books</button>
+                    </div>
+
+                    <div id="available" class="tab-content active">
+                        <h2>Available Books</h2>
+                        <div id="availableContainer" class="books-list"></div>
+                    </div>
+
+                    <div id="issued" class="tab-content">
+                        <h2>Issued Books</h2>
+                        <div id="issuedContainer" class="books-list"></div>
+                    </div>
+
+                    <div id="all" class="tab-content">
+                        <h2>All Books in Library</h2>
+                        <div id="allContainer" class="books-list"></div>
+                    </div>
+
+                    <div id="statsContainer" class="stats"></div>
+                </section>
+            </div>
+        </main>
+
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <script src="LibraryManagement.js"></script>
+</body>
+</html>

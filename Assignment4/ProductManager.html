@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Product Manager</title>
+    <link rel="stylesheet" href="ProductManager.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛒 E-Commerce Product Manager</h1>
+            <p>Manage products with discounts and filtering</p>
+        </header>
+
+        <main>
+            <section class="controls">
+                <h2>Add New Product</h2>
+                <form id="productForm">
+                    <div class="form-group">
+                        <label for="productId">Product ID:</label>
+                        <input type="number" id="productId" placeholder="e.g., 1" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" id="productName" placeholder="e.g., Laptop" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Price:</label>
+                        <input type="number" id="productPrice" placeholder="e.g., 50000" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productCategory">Category:</label>
+                        <input type="text" id="productCategory" placeholder="e.g., Electronics" required>
+                    </div>
+                    <button type="submit" class="btn">Add Product</button>
+                </form>
+            </section>
+
+            <section class="products-section">
+                <h2>All Products</h2>
+                <div id="allProductsContainer" class="products-grid">
+                    <!-- Products will be populated here -->
+                </div>
+            </section>
+
+            <section class="products-section">
+                <h2>Premium Products (Price > ₹1000)</h2>
+                <div id="premiumProductsContainer" class="products-grid">
+                    <!-- Premium products will be populated here -->
+                </div>
+            </section>
+
+            <section class="actions">
+                <h2>Quick Actions</h2>
+                <button class="btn btn-secondary" onclick="applyDiscountToAll()">Apply 10% Discount to All</button>
+                <button class="btn btn-secondary" onclick="resetDiscounts()">Reset Discounts</button>
+                <button class="btn btn-danger" onclick="clearAllProducts()">Clear All Products</button>
+            </section>
+
+            <section class="console-output">
+                <h2>Console Output</h2>
+                <div id="consoleOutput"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="ProductManager.js"></script>
+</body>
+</html>
