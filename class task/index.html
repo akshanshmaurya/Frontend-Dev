@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-Commerce Dashboard</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>;
+
+    <style>
+      body {
+        font-family: Arial;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 10px 5px;
+        cursor: pointer;
+        background: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
+
+      #productList {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .product {
+        background: white;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s;
+      }
+
+      .product.active {
+        border: 2px solid #28a745;
+        background: #e8ffe8;
+      }
+
+      .product h3 {
+        margin: 5px 0;
+      }
+
+      .description {
+        margin: 5px 0;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>E-Commerce Product Dashboard</h1>
+
+    <button id="loadProducts">Load Products (AJAX GET)</button>
+    <input type="text" id="titleInput" placeholder="Product Title" />
+    <textarea id="bodyInput" placeholder="Product Description"></textarea>
+    <input type="number" id="priceInput" placeholder="Price" />
+    <button id="addProduct">Add New Product (AJAX POST)</button>
+
+    <div id="productList"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#loadProducts").click(function () {
+          $.get("https://fakestoreapi.com/products", function (products) {
+            $("#productList").empty();
+
+            products.forEach(function (p) {
+              $("#productList").append(`
+                            <div class="product"
+                                data-stock="${p.rating.count}"
+                                data-discount="${p.price < 50}">
+
+                                <h3>${p.title}</h3>
+
+                                <p class="description" style="display:none;">
+                                    ${p.description}
+                                </p>
+
+                                <p>Price: $${p.price}</p>
+                            </div>
+                        `);
+            });
+          });
+        });
+        $(document).on("click", ".product", function () {
+          $(".product").removeClass("active");
+          $(this).addClass("active");
+          $(this).siblings().css("opacity", "0.5");
+          $(this).css("opacity", "1");
+
+          let stock = $(this).data("stock");
+
+          if (stock === 0) {
+            alert("This product is OUT OF STOCK!");
+          }
+        });
+        $(document).on("mouseenter", ".product", function () {
+          $(this).find(".description").slideDown();
+          if ($(this).data("discount") === true) {
+            $(this).css("background", "#fff3cd");
+          }
+        });
+
+        $(document).on("mouseleave", ".product", function () {
+          $(this).find(".description").slideUp();
+
+          if (!$(this).hasClass("active")) {
+            $(this).css("background", "white");
+          }
+        });
+
+        $("#addProduct").click(function () {
+            const title = $("#titleInput").val();
+            const body = $("#bodyInput").val();
+            const price = $("#priceInput").val();
+
+            if (!title || !body || !price) {
+                alert("Please fill all product fields.");
+                return;
+            }
+          $.post(
+            "https://jsonplaceholder.typicode.com/posts",
+            {
+              title: title,
+              body: body,
+              userId: 1,
+            },
+            function (response) {
+              $("#productList").prepend(`
+                        <div class="product" data-stock="20" data-discount="true">
+                            <h3>${response.title}</h3>
+                            <p class="description" style="display:none;">
+                                ${response.body}
+                            </p>
+                            <p>Price: $20</p>
+                        </div>
+                    `);
+
+              alert("Product Added Successfully!");
+
+              $("#titleInput").val(""); 
+              $("#bodyInput").val("");
+              $("#priceInput").val("");
+            }
+          );
+        });
+      });
+    </script>
+  </body>
+</html>
