@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q3 - Interactive FAQ</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#f9fbff}
+    .box{max-width:800px;margin:0 auto;background:#fff;border-radius:10px;padding:20px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    .faq .qa{padding:12px;border-bottom:1px solid #f0f4ff}
+    .question{font-weight:700;cursor:pointer}
+    .question.hovered{color:#2b6df6}
+    .answer{display:none;margin-top:8px;color:#333}
+    .qa input[type='text']{margin-top:8px;padding:8px;border-radius:6px;border:1px solid #ddd;width:100%}
+  </style>
+</head>
+<body>
+  <main class="box">
+    <header><h1>Q3 — Interactive FAQ</h1><p>Click to toggle answer; hover changes color; dblclick collapses all; focus/blur on input highlights parent.</p></header>
+
+    <section class="faq" id="faq">
+      <article class="qa" data-id="1">
+        <div class="question">What is the course duration?</div>
+        <div class="answer">The course runs for 12 weeks with a flexible schedule.</div>
+      </article>
+
+      <article class="qa" data-id="2">
+        <div class="question">How do I submit assignments?</div>
+        <div class="answer">Assignments are submitted via the assignment portal with a GitHub link.</div>
+      </article>
+
+      <article class="qa" data-id="3">
+        <div class="question">Is there mentorship support?</div>
+        <div class="answer">Yes — mentors are available for office hours and code reviews.</div>
+      </article>
+
+      <article class="qa" data-id="4">
+        <div class="question">Can I collaborate with peers?</div>
+        <div class="answer">Group projects are encouraged; follow the collaboration guidelines.</div>
+        <input type="text" placeholder="Leave a public note about this FAQ" class="note-input">
+      </article>
+
+      <article class="qa" data-id="5">
+        <div class="question">Are there tests and quizzes?</div>
+        <div class="answer">Short quizzes will be scheduled after each module to check progress.</div>
+      </article>
+    </section>
+
+    <footer style="margin-top:10px;color:#666">Interactions: click, hover, double-click, focus and blur.</footer>
+  </main>
+
+  <script src="InteractiveFAQ.js"></script>
+</body>
+</html>

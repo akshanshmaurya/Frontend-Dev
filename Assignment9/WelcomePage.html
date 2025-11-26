@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q1 - Welcome Page Greeting</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui, Arial, sans-serif;padding:36px;background:#f6fbff}
+    .card{max-width:640px;margin:0 auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    header h1{margin:0 0 8px}
+    .welcome{margin:18px 0;padding:12px;border-radius:8px;background:#f0f8ff}
+    .controls{display:flex;gap:8px;flex-wrap:wrap}
+    button{padding:10px 12px;border-radius:8px;border:1px solid #dfefff;background:#2b6df6;color:white;cursor:pointer}
+    #greeting{font-weight:700; cursor:pointer}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Q1 — Welcome Page Greeting</h1>
+      <p>Demo: dynamic greeting based on time, change text, toggle visibility, alert on click.</p>
+    </header>
+
+    <section class="welcome" id="welcomeSection">
+      <p id="greeting">(greeting will appear here)</p>
+      <p id="subMessage">We hope you enjoy the course.</p>
+    </section>
+
+    <section class="controls">
+      <button id="changeGreeting">Change Greeting</button>
+      <button id="toggleWelcome">Toggle Welcome Visibility</button>
+      <button id="resetGreeting">Reset Greeting</button>
+    </section>
+
+    <footer style="margin-top:16px;color:#555;font-size:0.9rem">Click on the greeting to trigger an alert (demonstrates .on('click')).</footer>
+  </main>
+
+  <script src="WelcomePage.js"></script>
+</body>
+</html>

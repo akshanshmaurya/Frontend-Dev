@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q2 - Product Highlight</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#f7fbff}
+    .container{max-width:1000px;margin:0 auto;background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    header h1{margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:18px}
+    .product{padding:10px;border-radius:8px;border:1px solid #eee;background:#fafcff;position:relative;cursor:pointer}
+    .product .fav{position:absolute;top:6px;right:8px;padding:6px;border-radius:50%;cursor:pointer}
+    .details{display:none;padding-top:8px;color:#444;font-size:0.9rem}
+    .out{opacity:0.6}
+    .highlight{outline:4px solid rgba(43,109,246,0.15);transform:translateY(-4px);box-shadow:0 10px 30px rgba(43,109,246,0.08)}
+    .selected{background:linear-gradient(90deg,#fff7e6,#fff2d1);border-color:#ffd58a}
+    .discount{border:2px dashed #ffbf00}
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Q2 — Product Highlight</h1>
+      <p>Click, hover, favorite, attribute selectors, and out-of-stock alerts using data attributes.</p>
+    </header>
+
+    <section class="grid" id="productGrid">
+      <!-- At least 6 products -->
+      <article class="product" data-price="350" data-discount="10" data-stock="10">
+        <button class="fav">♡</button>
+        <h3 class="title">Classic Watch</h3>
+        <p class="price">₹350</p>
+        <p class="summary">Simple, elegant timepiece.</p>
+        <div class="details">Material: Stainless steel<br>Warranty: 1 year</div>
+      </article>
+
+      <article class="product" data-price="180" data-stock="0" aria-label="out-of-stock">
+        <button class="fav">♡</button>
+        <h3 class="title">Gourmet Burger</h3>
+        <p class="price">₹180</p>
+        <p class="summary">Juicy patty & fresh buns.</p>
+        <div class="details">Contains: gluten<br>Calories: 550</div>
+      </article>
+
+      <article class="product" data-price="420" data-discount="20" data-stock="5">
+        <button class="fav">♡</button>
+        <h3 class="title">Sushi Special</h3>
+        <p class="price">₹420</p>
+        <p class="summary">Freshly rolled sushi platter.</p>
+        <div class="details">Chef's choice<br>Serves 2</div>
+      </article>
+
+      <article class="product" data-price="120" data-stock="15">
+        <button class="fav">♡</button>
+        <h3 class="title">Organic Salad</h3>
+        <p class="price">₹120</p>
+        <p class="summary">Fresh veggies & light dressing.</p>
+        <div class="details">Farm-sourced<br>Vegan</div>
+      </article>
+
+      <article class="product" data-price="80" data-discount="5" data-stock="3">
+        <button class="fav">♡</button>
+        <h3 class="title">Crispy Fries</h3>
+        <p class="price">₹80</p>
+        <p class="summary">Crispy golden fries.</p>
+        <div class="details">Served with ketchup<br>Best seller</div>
+      </article>
+
+      <article class="product" data-price="950" data-discount="15" data-stock="2">
+        <button class="fav">♡</button>
+        <h3 class="title">Premium Headphones</h3>
+        <p class="price">₹950</p>
+        <p class="summary">Noise-cancelling sound.</p>
+        <div class="details">Bluetooth 5.2<br>Battery: 30h</div>
+      </article>
+    </section>
+
+    <footer style="margin-top:14px;color:#666;font-size:0.95rem">Click a product to highlight; hover to reveal details; click the heart to favorite.</footer>
+  </main>
+
+  <script src="ProductHighlight.js"></script>
+</body>
+</html>

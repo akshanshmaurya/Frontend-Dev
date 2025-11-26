@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q4 - Special Offer Banner</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#fffdf6}
+    .wrap{max-width:960px;margin:0 auto;background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    header h1{margin:0 0 6px}
+    .banners{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0}
+    .banner{flex:1 1 280px;padding:12px;border-radius:8px;background:linear-gradient(90deg,#fff9f0,#fff3e0);border:1px solid #ffd6b3;position:relative}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <h1>Q4 — Special Offer Banner</h1>
+      <p>Hide/Show/Slide/Fade and auto-rotate banners every 5 seconds.</p>
+    </header>
+
+    <section class="banners" id="banners">
+      <aside class="banner" data-id="b1">Super Sale — 50% off on jackets</aside>
+      <aside class="banner" data-id="b2">Free shipping for orders over ₹499</aside>
+      <aside class="banner" data-id="b3">Bundle offer — Buy 2 get 1</aside>
+      <aside class="banner" data-id="b4">Festive discount — extra 10% for members</aside>
+      <aside class="banner" data-id="b5">Flash deal — limited time only</aside>
+    </section>
+
+    <section class="controls">
+      <button id="hideBtn">Hide (first)</button>
+      <button id="showBtn">Show hidden</button>
+      <button id="slideToggle">Slide Up/Down (second)</button>
+      <button id="fadeToggle">Fade In/Out (third)</button>
+      <button id="startRotate">Start Auto-Rotate</button>
+      <button id="stopRotate">Stop Auto-Rotate</button>
+    </section>
+
+  </main>
+
+  <script src="SpecialOfferBanner.js"></script>
+</body>
+</html>

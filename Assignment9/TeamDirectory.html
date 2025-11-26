@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q5 - Team Members Directory</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#f7fbff;color:#102}
+    .wrap{max-width:980px;margin:0 auto;background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    header h1{margin:0 0 8px}
+    .dept{margin-top:16px;border:1px solid #eef6ff;padding:12px;border-radius:8px;background:#fbfeff}
+    .manager{font-weight:700;cursor:pointer}
+    .employee{padding:8px;border-radius:6px;margin-top:6px;border:1px dashed #e8f4ff}
+    .info{display:none;color:#666;margin-left:8px}
+    .highlight{background:linear-gradient(90deg,#fff9e6,#fff3d1);border-color:#ffd58a}
+    .controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header><h1>Q5 — Team Members Directory</h1><p>Click manager to highlight team, hover employee to show contact, select random employee, and collapse/expand teams.</p></header>
+
+    <section class="controls">
+      <button id="randomBtn">Select Random Employee</button>
+      <button id="collapseAll">Collapse All</button>
+      <button id="expandAll">Expand All</button>
+    </section>
+
+    <section id="teams">
+      <div class="dept" data-dept="engineering">
+        <div class="manager">Manager: Priya (Engineering)</div>
+        <div class="employees">
+          <div class="employee" data-contact="priya.a@example.com">Aisha — Frontend <span class="info">Contact: aisha@example.com</span></div>
+          <div class="employee" data-contact="tom.k@example.com">Tom — Backend <span class="info">Contact: tom@example.com</span></div>
+          <div class="employee" data-contact="lee.s@example.com">Lee — QA <span class="info">Contact: lee@example.com</span></div>
+          <div class="employee" data-contact="sam.r@example.com">Sam — DevOps <span class="info">Contact: sam@example.com</span></div>
+          <div class="employee" data-contact="nina.t@example.com">Nina — Designer <span class="info">Contact: nina@example.com</span></div>
+        </div>
+      </div>
+
+      <div class="dept" data-dept="sales">
+        <div class="manager">Manager: Rohit (Sales)</div>
+        <div class="employees">
+          <div class="employee" data-contact="mike.s@example.com">Mike — Sales Rep <span class="info">Contact: mike@example.com</span></div>
+          <div class="employee" data-contact="anita.p@example.com">Anita — Sales Rep <span class="info">Contact: anita@example.com</span></div>
+          <div class="employee" data-contact="ron.k@example.com">Ron — Sales Rep <span class="info">Contact: ron@example.com</span></div>
+          <div class="employee" data-contact="peter.j@example.com">Peter — Sales Lead <span class="info">Contact: peter@example.com</span></div>
+          <div class="employee" data-contact="sara.l@example.com">Sara — Sales Ops <span class="info">Contact: sara@example.com</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="TeamDirectory.js"></script>
+</body>
+</html>
