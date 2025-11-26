@@ -1,0 +1,9 @@
+{
+  "products": [
+    { "id": 1, "name": "Classic Watch", "price": 350, "image": "https://picsum.photos/id/1011/200/150" },
+    { "id": 2, "name": "Premium Headphones", "price": 950, "image": "https://picsum.photos/id/1015/200/150" },
+    { "id": 3, "name": "Leather Wallet", "price": 400, "image": "https://picsum.photos/id/1025/200/150" },
+    { "id": 4, "name": "Bluetooth Speaker", "price": 1200, "image": "https://picsum.photos/id/1035/200/150" },
+    { "id": 5, "name": "Sunglasses", "price": 220, "image": "https://picsum.photos/id/1045/200/150" }
+  ]
+}

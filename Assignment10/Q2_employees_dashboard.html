@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q2 - Employee Status Dashboard</title>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#fffef8}
+    .wrap{max-width:760px;margin:0 auto;background:#fff;border-radius:10px;padding:18px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px;border-bottom:1px solid #f0f0f0;text-align:left}
+    .toggle{cursor:pointer}
+    .activeLabel{color:green;font-weight:700}
+    .inactiveLabel{color:#b30000;font-weight:700}
+    .error{color:#b30000;margin-top:8px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Employee Status Dashboard</h1>
+    <p>Uses XMLHttpRequest to GET and PATCH employees (toggle active/inactive).</p>
+
+    <div id="message" class="error"></div>
+    <table aria-id="employeeTable">
+      <thead><tr><th>ID</th><th>Name</th><th>Status</th><th>Toggle</th></tr></thead>
+      <tbody id="empBody"></tbody>
+    </table>
+
+    <p style="margin-top:12px;color:#666">When toggling a status, a PATCH request is sent and the UI updates immediately. If the request fails, the UI reverts and an error message is shown.</p>
+  </main>
+
+  <script src="Q2_employees_dashboard.js"></script>
+</body>
+</html>

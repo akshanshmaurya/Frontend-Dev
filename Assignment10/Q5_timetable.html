@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q5 - College Timetable Viewer</title>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#f6fbff}
+    .wrap{max-width:720px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    select{padding:8px;border-radius:6px;border:1px solid #ddd}
+    .list{margin-top:12px}
+    .row{padding:10px;border:1px solid #eee;border-radius:8px;margin-bottom:8px}
+    .empty{color:#888;padding:12px;text-align:center}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>College Timetable Viewer</h1>
+    <p>Pick a weekday to fetch schedule (endpoint: /timetable?day=).</p>
+
+    <label for="daySelect">Day: </label>
+    <select id="daySelect">
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+    </select>
+
+    <div id="timetableList" class="list"></div>
+  </main>
+
+  <script src="Q5_timetable.js"></script>
+</body>
+</html>

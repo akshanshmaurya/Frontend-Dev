@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q1 - Live Search</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:30px;background:#f7fbff}
+    .wrap{max-width:820px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    input[type='search']{width:100%;padding:12px;border-radius:8px;border:1px solid #ddd;margin-bottom:12px}
+    .loading{color:#444;opacity:0.8;font-style:italic}
+    .result{display:grid;grid-template-columns:100px 1fr;gap:12px;padding:10px;border-radius:8px;border:1px solid #eee;margin-bottom:8px;align-items:center}
+    .no-results{color:#999;padding:12px;text-align:center}
+    img.thumb{width:100px;height:75px;object-fit:cover;border-radius:6px}
+    .meta{font-weight:700}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Live Search (/products?q=)</h1>
+    <p>Type to search (ajax). Each query hits the API with ?q=value (json-server supports this).</p>
+
+    <input type="search" id="searchBox" placeholder="Search products..." autocomplete="off" />
+    <div id="status"></div>
+    <div id="results"></div>
+
+    <p style="margin-top:14px;color:#666;font-size:0.9rem">Run JSON Server with this file on a dedicated port (example in README).</p>
+  </main>
+
+  <script src="Q1_live_search.js"></script>
+</body>
+</html>

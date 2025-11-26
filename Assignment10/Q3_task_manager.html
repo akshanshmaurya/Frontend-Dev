@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q3 - Task Manager</title>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#f6f7fb}
+    .wrap{max-width:960px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    .controls{display:flex;gap:10px;align-items:center}
+    select{padding:8px;border-radius:6px;border:1px solid #ddd}
+    .task-list{margin-top:12px}
+    .task{display:flex;justify-content:space-between;padding:10px;border-radius:8px;border:1px solid #f0f0f0;margin-bottom:8px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Task Manager (/tasks)</h1>
+    <p>Sort and filter tasks using query parameters; toggle completion with PATCH.</p>
+
+    <div class="controls">
+      <label>Filter by: 
+        <select id="filterSelect">
+          <option value="">All</option>
+          <option value="Low">Low Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="High">High Priority</option>
+          <option value="completed">Completed</option>
+        </select>
+      </label>
+      <div id="info" style="margin-left:12px;color:#666">Server on port 3004 (example)</div>
+    </div>
+
+    <div class="task-list" id="taskList"></div>
+  </main>
+
+  <script src="Q3_task_manager.js"></script>
+</body>
+</html>

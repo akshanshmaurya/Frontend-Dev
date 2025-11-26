@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Q4 - Multi-API Dashboard</title>
+  <style>
+    body{font-family:system-ui,Arial,sans-serif;padding:28px;background:#fffef8}
+    .wrap{max-width:760px;margin:0 auto;background:#fff;padding:18px;border-radius:10px;box-shadow:0 6px 30px rgba(0,0,0,0.06)}
+    .grid{display:flex;gap:12px}
+    .card{flex:1;padding:18px;border-radius:8px;background:#fbfbff;border:1px solid #f0f4ff;text-align:center}
+    .skeleton{height:40px;background:linear-gradient(90deg,#eeeeee,#f8f8f8);border-radius:6px;margin:10px 0}
+    .warning{color:#b30000;font-weight:700;margin-top:12px}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Dashboard — Users / Orders / Products</h1>
+    <p>Fetch all three endpoints simultaneously using fetch + Promise.all. Show skeletons while loading.</p>
+
+    <div id="warning" class="warning"></div>
+    <div class="grid" id="dashboard">
+      <div class="card" id="cardUsers">
+        <h3>Users</h3>
+        <div id="usersCount"><div class="skeleton"></div></div>
+      </div>
+      <div class="card" id="cardOrders">
+        <h3>Orders</h3>
+        <div id="ordersCount"><div class="skeleton"></div></div>
+      </div>
+      <div class="card" id="cardProducts">
+        <h3>Products</h3>
+        <div id="productsCount"><div class="skeleton"></div></div>
+      </div>
+    </div>
+
+    <p style="margin-top:10px;color:#666">Run JSON Server with the Q4_db.json on a unique port (example in README) and point the code to it.</p>
+  </main>
+  <script src="Q4_dashboard.js"></script>
+</body>
+</html>
