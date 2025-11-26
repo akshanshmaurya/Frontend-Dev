@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q4 - Theme Switcher</title>
+  <link rel="stylesheet" href="ThemeSwitcher.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Theme Switcher</h1>
+      <p>Three themes — Light, Dark, Blue. Theme saved using data-theme attribute on body.</p>
+    </header>
+
+    <section class="theme-controls">
+      <button data-theme="light" class="theme-btn">Light</button>
+      <button data-theme="dark" class="theme-btn">Dark</button>
+      <button data-theme="blue" class="theme-btn">Blue</button>
+    </section>
+
+    <section class="content">
+      <h2>Demo content</h2>
+      <p>This page demonstrates applying themes by setting the body's <code>data-theme</code> attribute via setAttribute().</p>
+      <p>Current theme: <strong id="currentTheme">-</strong></p>
+    </section>
+
+    <footer>
+      <small>Switch theme; the value will be saved in <code>data-theme</code> attribute.</small>
+    </footer>
+  </main>
+
+  <script src="ThemeSwitcher.js"></script>
+</body>
+</html>

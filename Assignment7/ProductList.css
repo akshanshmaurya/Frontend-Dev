@@ -1,0 +1,17 @@
+* { box-sizing: border-box; }
+body { font-family: system-ui, Arial, sans-serif; background: linear-gradient(180deg,#f6f8fb,#fff); padding: 28px; }
+.app { max-width: 720px; margin: 0 auto; background: #ffffff; border-radius: 10px; padding: 24px; box-shadow: 0 10px 30px rgba(18,24,40,0.08);} 
+header h1 { margin: 0 0 6px; font-size: 1.6rem; }
+header p { margin: 0 0 18px; color: #555; font-size: 0.95rem; }
+.controls { display:flex; gap:8px; margin-bottom: 18px; }
+.controls input[type='text'] { flex:1; padding: 12px; border-radius: 8px; border:1px solid #ddd; }
+.controls button { padding: 10px 14px; border-radius: 8px; background: #2b6df6; color: white; border: none; cursor:pointer }
+.controls button:active { transform: translateY(1px); }
+.list ul { list-style: none; padding: 0; margin: 0; }
+.list li { display:flex; justify-content:space-between; gap:8px; align-items:center; padding:12px; border-radius:8px; border:1px solid #eee; margin-bottom:8px; }
+.item-name { flex:1; padding-right:10px; }
+.actions { display:flex; gap:8px; }
+.action-btn { padding:8px 10px; border-radius:6px; background: #f0f2ff; border:1px solid #d6ddff; cursor:pointer; }
+.action-btn.delete { background: #ffeaea; border-color: #ffcfcf; color:#b30000 }
+.edit-input { padding:8px; border-radius:6px; border:1px solid #ddd; width: 100%; }
+.empty-note { color:#999; text-align:center; padding:20px; }

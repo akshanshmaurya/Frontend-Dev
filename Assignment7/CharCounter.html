@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q2 - Live Character Counter</title>
+  <link rel="stylesheet" href="CharCounter.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Live Character Counter (max 100)</h1>
+      <p>Counter turns yellow at 20 left; red at 0 and typing is prevented.</p>
+    </header>
+
+    <section class="counter-area">
+      <textarea id="message" rows="6" placeholder="Type your message (max 100 chars)"></textarea>
+      <div class="controls">
+        <span id="charCounter">100</span>
+        <button id="resetBtn">Reset</button>
+      </div>
+    </section>
+
+    <section class="notes">
+      <small>When the counter reaches 0 further input is prevented. Reset will clear text and counter.</small>
+    </section>
+  </main>
+
+  <script src="CharCounter.js"></script>
+</body>
+</html>

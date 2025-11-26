@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dynamic Product List Manager</title>
+  <link rel="stylesheet" href="ProductList.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Product List Manager</h1>
+      <p>Add, edit and delete products. Uses event delegation and auto-save on blur/outside click.</p>
+    </header>
+
+    <section class="controls">
+      <input id="productInput" type="text" placeholder="Enter product name and press Add" />
+      <button id="addBtn">Add</button>
+    </section>
+
+    <section class="list">
+      <ul id="productList" aria-label="product-list"></ul>
+    </section>
+
+    <footer>
+      <small>Click a product's Edit button to change name inline; click outside to auto-save.</small>
+    </footer>
+  </main>
+
+  <script src="ProductList.js"></script>
+</body>
+</html>

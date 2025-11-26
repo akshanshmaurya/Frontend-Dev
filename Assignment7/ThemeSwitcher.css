@@ -1,0 +1,16 @@
+*{box-sizing:border-box}body{font-family:system-ui,Arial,sans-serif;margin:0;padding:30px;background:linear-gradient(180deg,#eef6ff,#fff)}.app{max-width:880px;margin:0 auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 8px 30px rgba(4,20,40,0.06)}header h1{margin-top:0} .theme-controls{display:flex;gap:10px;margin:12px 0} .theme-btn{padding:10px 14px;border-radius:8px;border:1px solid #ddd;background:#f7f7fb;cursor:pointer} .content{padding:12px;border-radius:8px;background:#fbfdff;border:1px solid #f0f4ff} footer{margin-top:16px;color:#666;font-size:0.9rem}
+
+/* THEMES applied using body[data-theme] */
+body[data-theme="light"] { background: linear-gradient(180deg,#ffffff,#f7f9ff); color: #111; }
+body[data-theme="light"] .app { background: #fff; }
+
+body[data-theme="dark"] { background: linear-gradient(180deg,#101014,#0f1530); color: #e6eef7; }
+body[data-theme="dark"] .app { background: #0f1320; box-shadow: 0 16px 35px rgba(0,0,0,0.5); }
+body[data-theme="dark"] .theme-btn { background:#202034;color:#f3f6ff;border-color:#2a2a3d }
+
+body[data-theme="blue"] { background: linear-gradient(180deg,#d9ecff,#eaf6ff); color: #08386b; }
+body[data-theme="blue"] .app { background: linear-gradient(180deg,#ffffff,#eaf5ff); }
+body[data-theme="blue"] .theme-btn { background:#e4f0ff; border-color:#c8e0ff; }
+
+/* Make sure current theme display is visible */
+#currentTheme{padding:4px 8px;border-radius:6px;background:rgba(0,0,0,0.03);font-weight:700}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q5 - Image Gallery (Modal Preview)</title>
+  <link rel="stylesheet" href="ImageGallery.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>Image Gallery</h1>
+      <p>Click any image to open a modal preview. Click outside to close. Modal content stops propagation.</p>
+    </header>
+
+    <section class="gallery" id="gallery">
+      <!-- images will be injected by JS, or you can place static <img> tags -->
+    </section>
+
+    <!-- Modal -->
+    <div id="modalOverlay" class="modal-overlay hidden">
+      <div class="modal-content" id="modalContent">
+        <button id="modalClose" class="modal-close">✕</button>
+        <img id="modalImage" src="" alt="Preview">
+      </div>
+    </div>
+
+  </main>
+
+  <script src="ImageGallery.js"></script>
+</body>
+</html>

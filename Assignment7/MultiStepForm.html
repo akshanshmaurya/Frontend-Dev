@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Q3 - Multi-Step Form</title>
+  <link rel="stylesheet" href="MultiStepForm.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>3-Step Registration</h1>
+      <p>Stepwise form with validation: Name → Email → Password</p>
+    </header>
+
+    <section class="form-box">
+      <form id="multiForm" novalidate>
+
+        <div class="step" data-step="1">
+          <label for="nameInput">Full name</label>
+          <input id="nameInput" name="name" type="text" placeholder="Your full name" required />
+          <div class="hint" id="nameHint"></div>
+          <div class="controls">
+            <div></div>
+            <button type="button" id="next1">Next</button>
+          </div>
+        </div>
+
+        <div class="step" data-step="2">
+          <label for="emailInput">Email</label>
+          <input id="emailInput" name="email" type="email" placeholder="you@example.com" required />
+          <div class="hint" id="emailHint"></div>
+          <div class="controls">
+            <button type="button" id="back2">Back</button>
+            <button type="button" id="next2">Next</button>
+          </div>
+        </div>
+
+        <div class="step" data-step="3">
+          <label for="passInput">Password</label>
+          <input id="passInput" name="password" type="password" placeholder="Min 6 chars" required />
+          <div class="hint" id="passHint"></div>
+          <div class="controls">
+            <button type="button" id="back3">Back</button>
+            <button type="submit" id="finish">Finish</button>
+          </div>
+        </div>
+
+        <div id="summary" class="step summary" data-step="4">
+          <h3>Summary</h3>
+          <div id="summaryContent"></div>
+          <div class="controls">
+            <button type="button" id="editStart">Edit</button>
+          </div>
+        </div>
+
+      </form>
+    </section>
+  </main>
+
+  <script src="MultiStepForm.js"></script>
+</body>
+</html>
